@@ -20,7 +20,7 @@ set -e
 
 case "$1" in
     configure)
-        pip3 install /usr/share/pdfarranger-pikepdf/*.whl
+        pip3 install /usr/share/pdfarranger-pikepdf/*.whl > /dev/null 2>&1
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)

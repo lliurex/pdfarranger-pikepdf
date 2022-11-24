@@ -19,8 +19,10 @@ set -e
 
 case "$1" in
     remove|upgrade|deconfigure)
-        pip3 remove pikepdf==5.0.1
-        pip3 remove pyparsing==3.0.9
+        pip3 uninstall -y pikepdf==5.0.1 
+        #> /dev/null 2>&1
+        pip3 uninstall -y pyparsing==3.0.9 
+        #> /dev/null 2>&1
     ;;
 
     failed-upgrade)
